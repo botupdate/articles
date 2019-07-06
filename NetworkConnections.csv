@@ -1,0 +1,12 @@
+Record ID;Local IP;Local Port;Remote IP;Remote Port;Package:UID;Last Seen;Activity(sec.)
+1;10.8.2.3;46166;174.35.21.172;443;com.sec.android.app.sbrowser:10125;3/14/19 17:49;340;
+2;10.8.2.3;34956;216.58.217.196;443;com.google.android.googlequicksearchbox:10076;3/16/19 05:57;1050;
+3;10.8.2.3;34396;216.58.217.196;443;com.android.vending:10045;3/14/19 17:49;170;
+4;10.8.2.3;59894;172.217.11.170;80;com.antispycell.connmonitor:10203;3/14/19 17:49;170;
+5;10.8.2.3;38820;199.5.26.46;80;com.antispycell.connmonitor:10203;3/14/19 17:49;136;
+6;10.8.2.3;35586;172.217.11.74;443;com.android.vending:10045;3/14/19 17:49;662;
+7;10.8.2.3;41096;172.217.14.72;443;com.google.uid.shared:10025:10025;3/14/19 17:49;170;
+8;10.8.2.3;33870;172.217.4.170;443;com.google.uid.shared:10025:10025;3/14/19 17:49;170;
+9;10.8.2.3;56360;52.2.7.160;443;com.enhance.gameservice:10107;3/14/19 17:49;136;
+10;10.8.2.3;53554;34.240.38.104;80;com.sec.spp.push:10050;3/14/19 17:49;170;
+NOTE: This file is generated with the TRIAL version of NetworkConnections for Android. Therefore only the first 10 rows are exported.

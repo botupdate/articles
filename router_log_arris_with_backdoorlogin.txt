@@ -1,0 +1,153 @@
+P0000-00-00T00:00:25 L7 sdb[702]: Loading platform module bcm_bpm
+P0000-00-00T00:00:25 L7 sdb[702]: Loading platform module pktflow args: fcacheMaxEntries=4096
+P0000-00-00T00:00:25 L7 sdb[702]: Loading platform module bcmfap
+P0000-00-00T00:00:25 L7 sdb[702]: Loading platform module bcm_enet
+P0000-00-00T00:00:25 L6 sdb[702]: SSL CA-root-cert directory is ready.
+P0000-00-00T00:00:25 L7 sdb[702]: https key/cert pair found.
+P0000-00-00T00:00:25 L6 sdb[702]: Reset phy on interface eth0
+P0000-00-00T00:00:25 L6 sdb[702]: Reset phy on interface eth1
+P0000-00-00T00:00:25 L6 sdb[702]: Reset phy on interface eth2
+P0000-00-00T00:00:25 L6 sdb[702]: Reset phy on interface eth3
+P0000-00-00T00:00:25 L6 sdb[702]: Hardware is 'NVG589'
+P0000-00-00T00:00:26 L6 sdb[702]: S/N 110319216261328, SKU 70
+P0000-00-00T00:00:26 L5 sdb[702]: System boot process completed
+P0000-00-00T00:00:26 L7 sdb[702]: sdb_system (ret 1): /sbin/modprobe dspdd 
+P0000-00-00T00:00:28 L7 sdb[702]: sdb_system (ret 1): mknod /dev/bcmendpoint0 c 209 0
+P0000-00-00T00:00:28 L5 sdb[702]: VOIP subsystem found
+P0000-00-00T00:00:28 L7 sdb[702]: netfilter: redirect object not found. skip prerouting rules
+P0000-00-00T00:00:33 L7 sdb[702]: netfilter: redirect object not found. skip prerouting rules
+P0000-00-00T00:00:34 L7 sdb[702]: ip6.route[1]: setting state from 'unset' to 'down'
+P0000-00-00T00:00:34 L7 sdb[702]: mgmt.lan-redirect: setting state from 'unset' to 'up'
+P0000-00-00T00:00:35 L3 sdb[702]: HPNA: subsystem found.
+P0000-00-00T00:00:35 L7 sdb[702]: ENSW: Internal Ethernet switch connected via bus_type 3
+P0000-00-00T00:00:35 L7 sdb[702]: ENSW: External Ethernet switch connected via bus_type 4
+P0000-00-00T00:00:35 L3 sdb[702]: Wi-Fi: 2.4GHz 2x2 subsystem found.
+P0000-00-00T00:00:35 L3 sdb[702]: Wi-Fi: UUID mac 64:55:b1:b2:78:d1
+P0000-00-00T00:00:35 L3 sdb[702]: Wi-Fi: UUID = 5835e6a4-e93e-2a3f-2a54-f1edc029ff6a
+P0000-00-00T00:00:35 L3 sdb[702]: Wi-Fi: Adding interface wl0 portname ssid-1
+P0000-00-00T00:00:35 L3 sdb[702]: Wi-Fi: Adding interface wl0.1 portname ssid-2
+P0000-00-00T00:00:35 L3 sdb[702]: Wi-Fi: Adding interface wl0.2 portname ssid-3
+P0000-00-00T00:00:35 L3 sdb[702]: Wi-Fi: Adding interface wl0.3 portname ssid-4
+P0000-00-00T00:00:36 L3 sdb[702]: DSL: EOC version 6455b1b278d0 NVG589 922217
+P0000-00-00T00:00:36 L7 sdb[702]: enabling vc[1]
+P0000-00-00T00:00:36 L7 sdb[702]: starting process /bin/voipexe (pid 1218)
+P0000-00-00T00:00:36 L5 sdb[702]: voipexe start returned ret=0 
+P0000-00-00T00:00:36 L6 sdb[702]: setting log level to 5
+P0000-00-00T00:00:36 L5 sdb[702]: SYS: loading saved configuration
+P0000-00-00T00:00:36 L3 sdb[702]: AUTOREBOOT: Feature disabled.
+P0000-00-00T00:00:38 L3 sdb[702]: External Ethernet switch assumed
+P0000-00-00T00:00:39 L3 sdb[702]: Wi-Fi: Initializing the subsystem
+P0000-00-00T00:00:40 L3 sdb[702]: Wi-Fi: Setting country code to US/73
+P0000-00-00T00:00:42 L3 sdb[702]: Wi-Fi: EAPD daemon started
+P0000-00-00T00:00:42 L3 sdb[702]: Wi-Fi: NAS daemon started
+P0000-00-00T00:00:42 L3 sdb[702]: Wi-Fi: ACS Daemon started
+P0000-00-00T00:00:43 L3 sdb[702]: DSL: saved mode: single, media: Unknown
+P0000-00-00T00:00:43 L3 sdb[702]: DSL: Bonding is disabled
+P0000-00-00T00:00:43 L3 sdb[702]: DSL: TPS-TC encoding set to PTM.
+P0000-00-00T00:00:44 L3 sdb[702]: DSL: Bitswap is ON, SRA is ON
+P0000-00-00T00:00:44 L3 sdb[702]: DSL: Dying Gasp is OFF
+P0000-00-00T00:00:44 L3 sdb[702]: DSL: Bitswap is ON, SRA is ON
+P0000-00-00T00:00:44 L3 sdb[702]: DSL: Dying Gasp is OFF
+P0000-00-00T00:00:44 L3 sdb[702]: DSL: DSP version - A2pv6F039m3.d26m
+P0000-00-00T00:00:47 L5 sdb[702]: HPNA: Link down
+P0000-00-00T00:00:48 L5 sdb[702]: conn[1]: interface configured: 192.168.1.254
+P0000-00-00T00:00:49 L3 sdb[702]: ***********start battctl process
+P0000-00-00T00:00:49 L3 sdb[702]: Setting sensor 1 Enable to ON, cnt 1
+P0000-00-00T00:00:49 L3 sdb[702]: Setting sensor 2 Enable to ON, cnt 2
+P0000-00-00T00:00:49 L5 sdb[702]: Alert mode change: Disabled
+P0000-00-00T00:00:50 L5 sdb[702]: change password for username: admin
+P0000-00-00T00:00:50 L5 sdb[702]: change password for username: tech
+P0000-00-00T00:00:50 L5 sdb[702]: change password for username: vikcmwhxgxbizb
+P0000-00-00T00:00:50 L5 sdb[702]: change password for username: remotessh
+P0000-00-00T00:00:50 L5 sdb[702]: no authorization-delay
+P0000-00-00T00:00:50 L5 sdb[702]: enable service: http
+P0000-00-00T00:00:50 L5 sdb[702]: enable service: https
+P0000-00-00T00:00:50 L3 sdb[702]: failed to start process '/bin/pppoe-relay' - No such file or directory
+P0000-00-00T00:00:51 L5 sdb[702]: skip authorization-delay: timer expired
+P0000-00-00T00:00:51 L3 vosdb[1218]: ********** Starting VOIP Tasks *************
+P0000-00-00T00:00:51 L3 radv[1726]: no linklocal address configured for br1
+P0000-00-00T00:00:51 L3 radv[1726]: can't join ipv6-allrouters on br1
+P0000-00-00T00:00:51 L4 radv[1726]: resetting ipv6-allrouters membership on br1
+P0000-00-00T00:00:51 L3 radv[1726]: can't join ipv6-allrouters on br1
+P0000-00-00T00:00:51 L4 radv[1726]: sendmsg: Network is unreachable
+P0000-00-00T00:00:53 L5 sdb[702]: dnsmasq started 1828
+P0000-00-00T00:00:53 L3 battctl[1603]: BATTERY: mcu revision number: 0112
+P0000-00-00T00:01:01 L3 sdb[702]: dns_lan_redirect_notify: DOWN - restart proxy
+P0000-00-00T00:01:01 L5 sdb[702]: database initialized
+P0000-00-00T00:01:01 L3 sdb[702]: ELAN: Port lan-1 is UP. (eth0) speed 1000 duplex full
+P0000-00-00T00:01:01 L3 sdb[702]: ELAN: Port hpna is UP. (eth4) speed 200 duplex full
+P0000-00-00T00:01:03 L3 battctl[1603]: BATTERY: battery not detected
+P0000-00-00T00:01:03 L3 battctl[1603]: ipc_msgq_send() with error 2:No such file or directory message size 96
+P0000-00-00T00:01:04 L4 radv[1726]: poll error: Interrupted system call
+P0000-00-00T00:01:04 L4 radv[1726]: Exiting, sigterm received.
+
+P0000-00-00T00:01:04 L4 radv[1726]: resetting ipv6-allrouters membership on br1
+P0000-00-00T00:01:04 L4 radv[1726]: sendmsg: Cannot assign requested address
+P0000-00-00T00:01:06 L5 sdb[702]: dnsmasq started 2286
+P0000-00-00T00:01:12 L3 dslstarth[1357]: DSL: Start line 1
+P0000-00-00T00:01:12 L3 vosdb[1218]: VOIP: Number of voice channel 2
+P0000-00-00T00:01:12 L3 vosdb[1218]: VOIP: Device Zarlink LE88536
+P0000-00-00T00:01:12 L3 vosdb[1218]: VOIP: DSP build date N/A
+P0000-00-00T00:01:12 L3 vosdb[1218]: VOIP: Zarlink API version 2.24.0
+P0000-00-00T00:02:07 L3 sdb[702]: DSL: Mode ADSL2+ (PTM)
+P0000-00-00T00:02:07 L3 sdb[702]: DSL: Sync Rate in kbps D/S 7196 U/S 766
+P0000-00-00T00:02:07 L3 sdb[702]: DSL: Latency path Interleaved
+P0000-00-00T00:02:07 L3 sdb[702]: DSL: Trellis D/S:ON U/S:ON
+P0000-00-00T00:02:07 L3 sdb[702]: DSL: CO Vendor b5004244434da3b8
+P0000-00-00T00:02:07 L3 sdb[702]: DSL: Link showtime counter since boot 1
+P0000-00-00T00:02:07 L3 sdb[702]: DSL: Retrain Reason System Startup
+P0000-00-00T00:02:23 L5 sdb[702]: conn[2]: starting dhcpcd. Broadcasting for a lease
+P0000-00-00T00:02:24 L5 sdb[702]: WAN: Using 802.1x Authenticator's MAC address (00:90:d0:63:ff:01) to determine WAN port
+P0000-00-00T00:02:24 L5 sdb[702]: WAN: auto detection using "ptm0.0" (bridge port 1)
+P0000-00-00T00:02:24 L5 sdb[702]: WAN: mcp to use interface ptm0.0 (mcfwd_upstream_if=19)
+P0000-00-00T00:02:24 L5 sdb[702]: WAN: auto detection finished, active port is "ptm"
+P0000-00-00T00:02:26 L3 dhcp6c[2586]: main: client6_init success
+P0000-00-00T00:02:26 L3 dhcp6c[2586]: main: cfparse success
+P0000-00-00T00:02:26 L3 dhcp6c[2591]: client6_start: client6_start:  adding event DHCP6S_INIT
+P0000-00-00T00:02:26 L3 dhcp6c[2591]: client6_send_confirm: Sending CONFIRM
+P0000-00-00T00:02:26 L3 dhcp6c[2591]: dhcp6c_build_cached_ia_list: Building cached IA_NA and IA_PD list for CONFIRM
+
+P0000-00-00T00:02:26 L3 dhcp6c[2591]: confirm_cached_ia: Creating CONFIRM event
+P0000-00-00T00:02:26 L3 dhcp6c[2591]: client6_send: transmit failed: Cannot assign requested address
+P0000-00-00T00:02:26 L3 dhcp6c[2591]: client6_send: transmit failed: Cannot assign requested address
+P0000-00-00T00:02:27 L3 dhcp6c[2591]: client6_send: transmit failed: Cannot assign requested address
+P0000-00-00T00:02:38 L3 dhcpd: ../../server/dhcpv6.c(6047): non-null pointer
+P0000-00-00T00:02:38 L3 dhcpd: ../../server/dhcpv6.c(6048): non-null pointer
+P0000-00-00T00:02:39 L4 radv[2261]: poll error: Interrupted system call
+P0000-00-00T00:02:39 L4 radv[2261]: Exiting, sigterm received.
+
+P0000-00-00T00:02:53 L5 connh[3208]: conn[2]: Received event BOUND from DHCP client
+P0000-00-00T00:02:53 L5 connh[3208]: conn[2] DHCP lease from 75.57.0.1 ip=99.120.145.114/255.255.252.0 leasetime=1209600 domain= dns1=68.94.156.8 dns2=68.94.157.8 gw=99.120.144.1
+P0000-00-00T00:02:53 L5 sdb[702]: conn[2]: interface configured: 99.120.145.114
+P0000-00-00T00:02:53 L5 cwmp[1671]: DSLF_WanMgmtChg path[conn[2].ipaddr] val[99.120.145.114]
+P0000-00-00T00:02:56 L3 cwmp[1671]: DSLF_WANIPChgProc 2
+P0000-00-00T00:02:59 L5 ntph[3416]: NTP Server check delayed for all NTP servers
+P0000-00-00T00:02:59 L5 ntph[3416]: NTP: waiting for 60 secs...
+P0000-00-00T00:03:00 L5 sdb[702]: dnsmasq started 3419
+2018-04-23T01:42:45-07:00 L1 ntph[3444]: NTP result to server 68.94.156.17 is 0
+2018-04-23T01:42:47-07:00 L1 ntph[3444]: Old time = 184, new time = 1524472967
+2018-04-23T01:42:47-07:00 L5 ntph[3444]: Update system date & time from NTP server 68.94.156.17
+2018-04-23T01:42:47-07:00 L5 ntph[3444]: NTP: waiting for 86400 secs...
+2018-04-23T01:42:49-07:00 L5 cwmp[1671]: next Periodic Inform after 13806 s
+2018-04-23T01:42:49-07:00 L4 cwmp[1671]: Resolving ACS URL - Retry 0
+2018-04-23T01:42:49-07:00 L5 cwmp[1671]: Connect to https://cwmp.c01.sbcglobal.net/cwmp/services/CWMP [144.160.58.42] Retry 0
+2018-04-23T01:42:50-07:00 L5 cwmp[1671]: (SSL) Connect Success: cwmp.c01.sbcglobal.net
+2018-04-23T01:42:50-07:00 L5 cwmp[1671]: (SSL) Certificate Verify Success: cwmp.c01.sbcglobal.net
+2018-04-23T01:42:54-07:00 L5 cwmp[1671]: Post Inform - reason 1 BOOT 
+2018-04-23T01:42:54-07:00 L5 cwmp[1671]: Server auth challenge received
+2018-04-23T01:42:54-07:00 L5 cwmp[1671]: Receive InformResponse
+2018-04-23T01:42:54-07:00 L5 cwmp[1671]: Post 0
+2018-04-23T01:42:55-07:00 L5 cwmp[1671]: Receive GetParameterValues
+2018-04-23T01:42:55-07:00 L5 cwmp[1671]: Post GetParameterValuesResponse (chunk-length - 698)
+2018-04-23T01:42:55-07:00 L5 cwmp[1671]: Continue GetParameterValuesResponse (chunk-length - 0)
+2018-04-23T01:42:55-07:00 L5 cwmp[1671]: Receive GetParameterValues
+2018-04-23T01:42:55-07:00 L5 cwmp[1671]: Post GetParameterValuesResponse (chunk-length - 4963)
+2018-04-23T01:42:55-07:00 L5 cwmp[1671]: Continue GetParameterValuesResponse (chunk-length - 0)
+2018-04-23T01:42:55-07:00 L5 cwmp[1671]: Receive SetParameterValues
+2018-04-23T01:42:55-07:00 L5 cwmp[1671]: Post SetParameterValuesResponse
+2018-04-23T01:42:55-07:00 L5 cwmp[1671]: Closing connection on HTTP 204
+2018-04-23T01:42:55-07:00 L5 cwmp[1671]: (SSL) Closing Connection: cwmp.c01.sbcglobal.net
+2018-04-23T03:33:43-07:00 L5 lua_webui[19532]: web login failure for user: admin 
+2018-04-23T03:34:10-07:00 L5 lua_webui[19607]: web login success for user: admin 
+2018-04-23T03:38:21-07:00 L4 sdb[702]: IGMP: stats not found or already in progress - No child processes
+2018-04-23T03:38:21-07:00 L4 sdb[702]: IGMP: stats not found or already in progress - No child processes

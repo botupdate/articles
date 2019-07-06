@@ -1,0 +1,92 @@
+--------- beginning of main
+03-21 03:41:05.178 W/zygote  (  674): Skipping duplicate class check due to unrecognized classloader
+03-21 03:41:05.179 W/System.err(  674): Warning: Using deprecated Element constructor. Do not use internal APIs, this constructor will be removed in the future.
+03-21 03:41:05.206 W/ImageLoader(  674): diskCache(), diskCacheSize() and diskCacheFileCount calls overlap each other
+03-21 03:41:05.206 W/ImageLoader(  674): diskCache() and diskCacheFileNameGenerator() calls overlap each other
+03-21 03:41:05.306 I/Process (  674): Sending signal. PID: 28162 SIG: 9
+03-21 03:41:05.327 I/DpmTcmClient(  674): RegisterTcmMonitor from: com.android.okhttp.TcmIdleTimerMonitor
+03-21 03:41:05.339 I/LogService(  674): LogService onCreate
+03-21 03:41:05.365 I/vndksupport(  674): sphal namespace is not configured for this process. Loading /vendor/lib/hw/gralloc.msm8998.so from the current namespace instead.
+03-21 03:41:05.371 E/        (  674): Cannot load libgui-plugin
+03-21 03:41:06.321 I/System.out(  674): false---
+03-21 03:41:08.425 E/LogService(  674):  clearLogCache proc.waitFor() != 0
+03-21 03:41:10.192 W/Zygote  (22437): child_detach_binder close binder 
+03-21 03:41:10.215 W/System.err(  674): org.xutils.ex.DbException: Attempt to invoke interface method 'java.lang.String org.xutils.db.annotation.Table.name()' on a null object reference
+03-21 03:41:10.216 W/System.err(  674): 	at org.xutils.db.table.DbBase.getTable(DbBase.java:32)
+03-21 03:41:10.216 W/System.err(  674): 	at org.xutils.db.DbManagerImpl.findById(DbManagerImpl.java:331)
+03-21 03:41:10.216 W/System.err(  674): 	at com.sz.panamera.ycs.acty.SplashActivity.getHttpResultForTag(SplashActivity.java:466)
+03-21 03:41:10.216 W/System.err(  674): 	at com.sz.panamera.ycs.globle.BaseActivity$4.onResponse(BaseActivity.java:202)
+03-21 03:41:10.216 W/System.err(  674): 	at com.sz.panamera.ycs.globle.BaseActivity$4.onResponse(BaseActivity.java:192)
+03-21 03:41:10.216 W/System.err(  674): 	at com.sz.panamera.ycs.volley.toolbox.JsonRequest.deliverResponse(JsonRequest.java:65)
+03-21 03:41:10.216 W/System.err(  674): 	at com.sz.panamera.ycs.volley.ExecutorDelivery$ResponseDeliveryRunnable.run(ExecutorDelivery.java:99)
+03-21 03:41:10.216 W/System.err(  674): 	at android.os.Handler.handleCallback(Handler.java:789)
+03-21 03:41:10.216 W/System.err(  674): 	at android.os.Handler.dispatchMessage(Handler.java:98)
+03-21 03:41:10.216 W/System.err(  674): 	at android.os.Looper.loop(Looper.java:164)
+03-21 03:41:10.216 W/System.err(  674): 	at android.app.ActivityThread.main(ActivityThread.java:6809)
+03-21 03:41:10.216 W/System.err(  674): 	at java.lang.reflect.Method.invoke(Native Method)
+03-21 03:41:10.216 W/System.err(  674): 	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:240)
+03-21 03:41:10.216 W/System.err(  674): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:767)
+03-21 03:41:10.216 W/System.err(  674): Caused by: java.lang.NullPointerException: Attempt to invoke interface method 'java.lang.String org.xutils.db.annotation.Table.name()' on a null object reference
+03-21 03:41:10.216 W/System.err(  674): 	at org.xutils.db.table.TableEntity.<init>(TableEntity.java:50)
+03-21 03:41:10.216 W/System.err(  674): 	at org.xutils.db.table.DbBase.getTable(DbBase.java:30)
+03-21 03:41:10.216 W/System.err(  674): 	... 13 more
+03-21 03:41:10.216 W/System.err(  674): org.xutils.ex.DbException: Attempt to invoke interface method 'java.lang.String org.xutils.db.annotation.Table.name()' on a null object reference
+03-21 03:41:10.216 W/System.err(  674): 	at org.xutils.db.table.DbBase.getTable(DbBase.java:32)
+03-21 03:41:10.216 W/System.err(  674): 	at org.xutils.db.DbManagerImpl.save(DbManagerImpl.java:182)
+03-21 03:41:10.217 W/System.err(  674): 	at com.sz.panamera.ycs.acty.SplashActivity.getHttpResultForTag(SplashActivity.java:488)
+03-21 03:41:10.217 W/System.err(  674): 	at com.sz.panamera.ycs.globle.BaseActivity$4.onResponse(BaseActivity.java:202)
+03-21 03:41:10.217 W/System.err(  674): 	at com.sz.panamera.ycs.globle.BaseActivity$4.onResponse(BaseActivity.java:192)
+03-21 03:41:10.217 W/System.err(  674): 	at com.sz.panamera.ycs.volley.toolbox.JsonRequest.deliverResponse(JsonRequest.java:65)
+03-21 03:41:10.217 W/System.err(  674): 	at com.sz.panamera.ycs.volley.ExecutorDelivery$ResponseDeliveryRunnable.run(ExecutorDelivery.java:99)
+03-21 03:41:10.217 W/System.err(  674): 	at android.os.Handler.handleCallback(Handler.java:789)
+03-21 03:41:10.217 W/System.err(  674): 	at android.os.Handler.dispatchMessage(Handler.java:98)
+03-21 03:41:10.217 W/System.err(  674): 	at android.os.Looper.loop(Looper.java:164)
+03-21 03:41:10.217 W/System.err(  674): 	at android.app.ActivityThread.main(ActivityThread.java:6809)
+03-21 03:41:10.217 W/System.err(  674): 	at java.lang.reflect.Method.invoke(Native Method)
+03-21 03:41:10.217 W/System.err(  674): 	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:240)
+03-21 03:41:10.217 W/System.err(  674): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:767)
+03-21 03:41:10.217 W/System.err(  674): Caused by: java.lang.NullPointerException: Attempt to invoke interface method 'java.lang.String org.xutils.db.annotation.Table.name()' on a null object reference
+03-21 03:41:10.217 W/System.err(  674): 	at org.xutils.db.table.TableEntity.<init>(TableEntity.java:50)
+03-21 03:41:10.217 W/System.err(  674): 	at org.xutils.db.table.DbBase.getTable(DbBase.java:30)
+03-21 03:41:10.217 W/System.err(  674): 	... 13 more
+03-21 03:41:10.254 W/dex2oat (22437): Using default instruction set features for ARM CPU variant (default) using conservative defaults
+03-21 03:41:10.255 I/dex2oat (22437): /system/bin/dex2oat --dex-file=/data/data/com.sz.panamera.ycs/.jiagu/classes.dex --dex-file=/data/data/com.sz.panamera.ycs/.jiagu/classes.dex:classes2.dex --oat-file=/data/data/com.sz.panamera.ycs/.jiagu/oat/arm/classes.odex --inline-max-code-units=0 --compiler-filter=speed
+03-21 03:41:10.273 E/BoostFramework(  674): BoostFramework() : Exception_1 = java.lang.NoSuchMethodException: perfIOPrefetchStart [int, class java.lang.String]
+03-21 03:41:10.302 W/sz.panamera.ycs(  674): type=1400 audit(0.0:14058): avc: denied { ioctl } for path="socket:[1404254]" dev="sockfs" ino=1404254 ioctlcmd=8927 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:r:untrusted_app_25:s0:c512,c768 tclass=tcp_socket permissive=0
+03-21 03:41:10.314 I/IOTCamera(  674): IOTC_Initialize2() returns 0
+03-21 03:41:10.315 I/IOTCamera(  674): avInitialize() = 64
+03-21 03:41:10.331 I/MP4V2   (  674): === MP4V2 OPENED ===
+03-21 03:41:10.331 I/MP4V2   (  674): VERSION : 2015.09.24 - howard.chu
+03-21 03:41:10.331 I/MP4V2   (  674): ====================
+03-21 03:41:10.333 I/IOTCamera(  674): register IOTC listener
+03-21 03:41:10.351 I/IOTCamera(  674): register IOTC listener
+03-21 03:41:11.748 I/dex2oat (22437): dex2oat took 1.494s (5.902s cpu) (threads: 8) arena alloc=9MB (9577232B) java alloc=3MB (3807336B) native alloc=13MB (14360112B) free=13MB (13951440B)
+03-21 03:41:11.766 I/IOTCamera(  674): IOTC_Get_SessionID SID = 0
+03-21 03:41:11.822 W/sz.panamera.ycs(  674): type=1400 audit(0.0:14060): avc: denied { ioctl } for path="socket:[1404629]" dev="sockfs" ino=1404629 ioctlcmd=8927 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:r:untrusted_app_25:s0:c512,c768 tclass=tcp_socket permissive=0
+03-21 03:41:11.932 W/sz.panamera.ycs(  674): type=1400 audit(0.0:14062): avc: denied { ioctl } for path="socket:[1404681]" dev="sockfs" ino=1404681 ioctlcmd=8927 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:r:untrusted_app_25:s0:c512,c768 tclass=tcp_socket permissive=0
+03-21 03:41:11.952 W/sz.panamera.ycs(  674): type=1400 audit(0.0:14066): avc: denied { ioctl } for path="socket:[1404683]" dev="sockfs" ino=1404683 ioctlcmd=8927 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:r:untrusted_app_25:s0:c512,c768 tclass=tcp_socket permissive=0
+03-21 03:41:12.032 W/sz.panamera.ycs(  674): type=1400 audit(0.0:14068): avc: denied { ioctl } for path="socket:[1404684]" dev="sockfs" ino=1404684 ioctlcmd=8927 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:r:untrusted_app_25:s0:c512,c768 tclass=tcp_socket permissive=0
+03-21 03:41:12.058 I/IOTCamera(  674): ===ThreadConnectDev exit===
+03-21 03:41:13.136 I/IOTCamera(  674): ===ThreadStartDev exit===
+--------- beginning of system
+03-21 03:41:13.473 W/ViewRootImpl[Main](  674): Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x68, repeatCount=0, eventTime=29160325, downTime=29160294, deviceId=-1, source=0x101 }
+03-21 03:41:13.473 I/chatty  (  674): uid=10102(com.sz.panamera.ycs) identical 4 lines
+03-21 03:41:13.473 W/ViewRootImpl[Main](  674): Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x68, repeatCount=0, eventTime=29160325, downTime=29160294, deviceId=-1, source=0x101 }
+03-21 03:41:13.879 I/IOTCamera(  674): avClientExit(0, 0)
+03-21 03:41:13.879 I/IOTCamera(  674): avSendIOCtrlExit(0)
+03-21 03:41:13.880 W/System.err(  674): java.lang.InterruptedException
+03-21 03:41:13.880 W/System.err(  674): 	at java.lang.Thread.sleep(Native Method)
+03-21 03:41:13.880 W/System.err(  674): 	at java.lang.Thread.sleep(Thread.java:373)
+03-21 03:41:13.880 W/System.err(  674): 	at java.lang.Thread.sleep(Thread.java:314)
+03-21 03:41:13.880 W/System.err(  674): 	at com.tutk.IOTC.Camera$j.run(Camera.java:4963)
+03-21 03:41:13.880 I/IOTCamera(  674): ===ThreadRecvIOCtrl exit===
+03-21 03:41:13.894 I/IOTCamera(  674): avSendIOCtrl(0, 0xff, 00 00 00 00 )
+03-21 03:41:13.894 I/IOTCamera(  674): ===ThreadSendIOCtrl exit===
+03-21 03:41:13.895 I/IOTCamera(  674): avClientStop(avIndex = 0)
+03-21 03:41:13.896 W/System.err(  674): java.lang.InterruptedException
+03-21 03:41:13.896 W/System.err(  674): 	at java.lang.Object.wait(Native Method)
+03-21 03:41:13.896 W/System.err(  674): 	at java.lang.Object.wait(Object.java:422)
+03-21 03:41:13.896 W/System.err(  674): 	at com.tutk.IOTC.Camera$b.run(Camera.java:2147)
+03-21 03:41:13.896 I/IOTCamera(  674): ===ThreadCheckDevStatus exit===
+03-21 03:41:13.896 I/IOTCamera(  674): IOTC_Session_Close(nSID = 0)
+03-21 03:41:13.896 I/IOTCamera(  674): unregister IOTC listener
