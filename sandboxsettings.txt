@@ -1,0 +1,293 @@
+Sandbox Status
+Process	Type	Name	Sandbox	Lockdown	Integrity	Mitigations
+7264	GPU	GPU	GPU	Limited	S-1-16-4096 Low	01111001010110000000000000010000
+7292	Utility	Network Service	Not Sandboxed			
+8172	Renderer		Renderer	Lockdown	S-1-16-0 Untrusted	01111001110110000000000000010000
+5092	Renderer		Renderer	Lockdown	S-1-16-0 Untrusted	01111001110110000000000000010000
+7700	Renderer		Renderer	Lockdown	S-1-16-0 Untrusted	01111001110110000000000000010000
+policies: [
+  {
+    "desiredIntegrityLevel": "S-1-16-4096 Low",
+    "desiredMitigations": "00000000002f1367",
+    "jobLevel": "Limited User",
+    "lockdownLevel": "Limited",
+    "platformMitigations": "01111001010110000000000000010000",
+    "policyRules": {
+      "CreateNamedPipeW": [
+        "prefix_i(p[0], '\\\\.\\pipe\\chrome.sync.') -> askBroker"
+      ],
+      "NtCreateFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtOpenFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtQueryAttributesFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtQueryFullAttributesFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtSetInfoRename": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ]
+    },
+    "processIds": [
+      7264
+    ]
+  },
+  {
+    "desiredIntegrityLevel": "S-1-16-0 Untrusted",
+    "desiredMitigations": "00000000002f1b67",
+    "jobLevel": "Lockdown",
+    "lockdownLevel": "Lockdown",
+    "platformMitigations": "01111001110110000000000000010000",
+    "policyRules": {
+      "CreateNamedPipeW": [
+        "prefix_i(p[0], '\\\\.\\pipe\\chrome.sync.') -> askBroker"
+      ],
+      "GdiDllInitialize": [
+        " -> fakeSuccess"
+      ],
+      "GetStockObject": [
+        " -> fakeSuccess"
+      ],
+      "NtCreateFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtCreateSection": [
+        "exact_i(p[0], '\\Device\\HarddiskVolume3\\Program Files (x86)\\Google\\Chrome\\Application\\84.0.4147.105\\chrome.dll') -> askBroker",
+        "exact_i(p[0], '\\Device\\HarddiskVolume3\\Program Files (x86)\\Google\\Chrome\\Application\\84.0.4147.105\\chrome_elf.dll') -> askBroker"
+      ],
+      "NtOpenFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtQueryAttributesFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtQueryFullAttributesFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtSetInfoRename": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "RegisterClassW": [
+        " -> fakeSuccess"
+      ]
+    },
+    "processIds": [
+      7700
+    ]
+  },
+  {
+    "desiredIntegrityLevel": "S-1-16-0 Untrusted",
+    "desiredMitigations": "00000000002f1b67",
+    "jobLevel": "Lockdown",
+    "lockdownLevel": "Lockdown",
+    "platformMitigations": "01111001110110000000000000010000",
+    "policyRules": {
+      "CreateNamedPipeW": [
+        "prefix_i(p[0], '\\\\.\\pipe\\chrome.sync.') -> askBroker"
+      ],
+      "GdiDllInitialize": [
+        " -> fakeSuccess"
+      ],
+      "GetStockObject": [
+        " -> fakeSuccess"
+      ],
+      "NtCreateFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtCreateSection": [
+        "exact_i(p[0], '\\Device\\HarddiskVolume3\\Program Files (x86)\\Google\\Chrome\\Application\\84.0.4147.105\\chrome.dll') -> askBroker",
+        "exact_i(p[0], '\\Device\\HarddiskVolume3\\Program Files (x86)\\Google\\Chrome\\Application\\84.0.4147.105\\chrome_elf.dll') -> askBroker"
+      ],
+      "NtOpenFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtQueryAttributesFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtQueryFullAttributesFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtSetInfoRename": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "RegisterClassW": [
+        " -> fakeSuccess"
+      ]
+    },
+    "processIds": [
+      1804
+    ]
+  },
+  {
+    "desiredIntegrityLevel": "S-1-16-0 Untrusted",
+    "desiredMitigations": "00000000002f1b67",
+    "jobLevel": "Lockdown",
+    "lockdownLevel": "Lockdown",
+    "platformMitigations": "01111001110110000000000000010000",
+    "policyRules": {
+      "CreateNamedPipeW": [
+        "prefix_i(p[0], '\\\\.\\pipe\\chrome.sync.') -> askBroker"
+      ],
+      "GdiDllInitialize": [
+        " -> fakeSuccess"
+      ],
+      "GetStockObject": [
+        " -> fakeSuccess"
+      ],
+      "NtCreateFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtCreateSection": [
+        "exact_i(p[0], '\\Device\\HarddiskVolume3\\Program Files (x86)\\Google\\Chrome\\Application\\84.0.4147.105\\chrome.dll') -> askBroker",
+        "exact_i(p[0], '\\Device\\HarddiskVolume3\\Program Files (x86)\\Google\\Chrome\\Application\\84.0.4147.105\\chrome_elf.dll') -> askBroker"
+      ],
+      "NtOpenFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtQueryAttributesFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtQueryFullAttributesFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtSetInfoRename": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "RegisterClassW": [
+        " -> fakeSuccess"
+      ]
+    },
+    "processIds": [
+      5092
+    ]
+  },
+  {
+    "desiredIntegrityLevel": "S-1-16-0 Untrusted",
+    "desiredMitigations": "00000000002f1b67",
+    "jobLevel": "Lockdown",
+    "lockdownLevel": "Lockdown",
+    "platformMitigations": "01111001110110000000000000010000",
+    "policyRules": {
+      "CreateNamedPipeW": [
+        "prefix_i(p[0], '\\\\.\\pipe\\chrome.sync.') -> askBroker"
+      ],
+      "GdiDllInitialize": [
+        " -> fakeSuccess"
+      ],
+      "GetStockObject": [
+        " -> fakeSuccess"
+      ],
+      "NtCreateFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtCreateSection": [
+        "exact_i(p[0], '\\Device\\HarddiskVolume3\\Program Files (x86)\\Google\\Chrome\\Application\\84.0.4147.105\\chrome.dll') -> askBroker",
+        "exact_i(p[0], '\\Device\\HarddiskVolume3\\Program Files (x86)\\Google\\Chrome\\Application\\84.0.4147.105\\chrome_elf.dll') -> askBroker"
+      ],
+      "NtOpenFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "!(p[2] & 5fedff56) && p[3] == 1 && prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtQueryAttributesFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtQueryFullAttributesFile": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "exact_i(p[0], '\\??\\C:\\Windows\\Fonts') -> askBroker",
+        "prefix_i(p[0], '\\??\\C:\\Windows\\Fonts\\') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "NtSetInfoRename": [
+        "!(p[1] & 1) && !(prefix(p[0], '\\??\\')) -> askBroker",
+        "!(p[1] & 1) && scan(p[0], '~') -> askBroker",
+        "prefix_i(p[0], '\\??\\pipe\\chrome.') -> askBroker"
+      ],
+      "RegisterClassW": [
+        " -> fakeSuccess"
+      ]
+    },
+    "processIds": [
+      8172
+    ]
+  }
+]
